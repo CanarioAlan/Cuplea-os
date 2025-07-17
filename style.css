@@ -1,0 +1,28 @@
+:root {
+  --color-base: #e7e7e7;
+  --color-primario: #f9d6d5;
+  --color-secundario: #b5706e;
+  --color-negro: #000;
+  --color-blanco: #fff;
+}
+/* ---------------------------- generales ---------------------------- */
+/* border box */
+* {
+  box-sizing: border-box;
+}
+/* rem vale 10px */
+html {
+  font-size: 62.5%;
+}
+/* color de fondo body */
+body {
+  background-image: url(img/fondo.png);
+  background-size: 20rem;
+  background-color: var(--color-primario);
+  text-align: center;
+}
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+}
