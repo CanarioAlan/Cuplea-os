@@ -17,7 +17,7 @@ body {
 }
 header {
   background: url("img/dino-fondo.png") center/80% no-repeat;
-  height: 300px;
+  height: 400px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -61,7 +61,6 @@ section {
     margin-top: 1rem;
     transition: background-color 0.3s;
     font-size: 1.3rem;
-
     &:hover {
       background-color: #ff6b7d;
     }
@@ -81,6 +80,220 @@ footer {
   font-size: 1.3rem;
   font-weight: bold;
   color: var(--color-texto);
+}
+
+#animacion-cumple {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-secundario);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 1s ease-out 5s forwards;
+  .mensaje {
+    text-align: center;
+    z-index: 2;
+    img {
+      max-width: 3500px;
+      animation: zoomIn 1s ease;
+    }
+    p {
+      font-size: 2rem;
+      color: var(--color-acento);
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  }
+  .globos {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    .globo {
+      width: 30px;
+      height: 40px;
+      border-radius: 50%;
+      animation: subir 6s linear;
+      opacity: 0.8;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 20px;
+        background: #aaa;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .rojo {
+      background-color: #ff4f4f;
+      animation-delay: 0s;
+    }
+    .rosa {
+      background-color: #ffb3d1;
+      animation-delay: 1s;
+    }
+    .coral {
+      background-color: #ff8c94;
+      animation-delay: 2s;
+    }
+  }
+  .decoraciones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+    .estrella {
+      position: absolute;
+      font-size: 1.5rem;
+      animation: flotar 4s ease-in-out infinite;
+      opacity: 0.8;
+    }
+    .estrella1 {
+      top: 20%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+    .estrella2 {
+      top: 30%;
+      left: 70%;
+      animation-delay: 1s;
+    }
+    .estrella3 {
+      top: 50%;
+      left: 40%;
+      animation-delay: 2s;
+    }
+    .confeti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: pink;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: caer 6s linear infinite;
+    }
+    .confeti1 {
+      left: 25%;
+      animation-delay: 0s;
+      background-color: #ffb3b3;
+    }
+    .confeti2 {
+      left: 50%;
+      animation-delay: 1s;
+      background-color: #ffc0cb;
+    }
+    .confeti3 {
+      left: 75%;
+      animation-delay: 2s;
+      background-color: #ffa8a8;
+    }
+  }
+  .memes {
+    img {
+      width: 110px;
+      position: absolute;
+      border-radius: 20%;
+      animation: bibrar 1.2s infinite ease-in-out;
+    }
+    .meme-1 {
+      top: 1px;
+      left: 5px;
+    }
+    .meme-2 {
+      top: 1px;
+      right: 5px;
+    }
+    .meme-3 {
+      bottom: 15px;
+      right: 5px;
+    }
+    .meme-4 {
+      bottom: 15px;
+      left: 5px;
+    }
+  }
+}
+@keyframes subir {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Estrellitas flotantes */
+@keyframes flotar {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10px) rotate(20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+}
+
+/* bolitas que cae */
+
+@keyframes caer {
+  0% {
+    top: -10%;
+    transform: translateX(0);
+  }
+  100% {
+    top: 110%;
+    transform: translateX(20px);
+  }
+}
+/* bibrar  */
+@keyframes bibrar {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1.5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-1.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @media screen and (min-width: 600px) {

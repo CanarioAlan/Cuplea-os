@@ -10,8 +10,33 @@
 </head>
 
 <body>
+    <div id="animacion-cumple">
+        <div class="mensaje">
+            <img src="img/dino-fondo.png" alt="Feliz Cumple Sofi">
+            <p>¡Te invito a mi cumple! 🎉</p>
+        </div>
+        <div class="globos">
+            <div class="globo rojo"></div>
+            <div class="globo rosa"></div>
+            <div class="globo coral"></div>
+        </div>
+        <div class="decoraciones">
+            <div class="estrella estrella1">✨</div>
+            <div class="estrella estrella2">✨</div>
+            <div class="estrella estrella3">✨</div>
+            <div class="confeti confeti1"></div>
+            <div class="confeti confeti2"></div>
+            <div class="confeti confeti3"></div>
+        </div>
+        <div class="memes">
+            <img src="img/meme-1.png" class="meme meme-1">
+            <img src="img/meme-2.png" class="meme meme-2">
+            <img src="img/meme-3.jpg" class="meme meme-3">
+            <img src="img/meme-4.jpeg" class="meme meme-4">
+        </div>
+    </div>
     <header>
-        <h1>Panch Party 🦕</h1>
+        <h1>Panch Party 🦖</h1>
     </header>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#ffb3b3e6" fill-opacity="1"
@@ -20,7 +45,7 @@
     </svg>
     <section>
         <h2>¿Qué celebro?</h2>
-        <p>¡Mi cumpleaños y quiero festejarlo con vos! 💅🦕</p>
+        <p>¡Mi cumpleaños y quiero festejarlo con vos! 💅🦖</p>
         <a class="boton" href="https://www.google.com/maps?q=TU_DIRECCION_AQUI" target="_blank">¿Cómo llegar?</a>
 
     </section>
@@ -41,7 +66,11 @@
             ¡Te espero, no faltes! 🐒💖
         </p>
     </footer>
-
+    <script>
+        setTimeout(() => {
+            document.getElementById('animacion-cumple').style.display = 'none';
+        }, 6000);
+    </script>
 </body>
 
 </html>
